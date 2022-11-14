@@ -14,5 +14,20 @@ const images = [
 ];
 
 
+const galleryListRef = document.querySelector('.gallery');
+galleryListRef.classList.add('list');
 
+const makeGalleryItems = images => {
+  return images.map(image => {
+    const liRef = document.createElement('li');
+    liRef.insertAdjacentHTML('beforeend', '<img src=' + image.url + ' alt="' + image.alt + '">');
+    
+    return liRef;
+  });
+  
+};
+
+const galleryItems = makeGalleryItems(images);
+
+galleryListRef.append(...galleryItems);
 
