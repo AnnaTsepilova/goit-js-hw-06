@@ -27,8 +27,6 @@ const makeGalleryItem = images => {
   
 };
 
-const galleryItems = makeGalleryItem(images);
-
-galleryListRef.append(...galleryItems);
+galleryListRef.append(...makeGalleryItem(images));
 
   
