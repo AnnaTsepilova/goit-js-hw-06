@@ -17,17 +17,18 @@ const images = [
 const galleryListRef = document.querySelector('.gallery');
 galleryListRef.classList.add('list');
 
-const makeGalleryItems = images => {
+const makeGalleryItem = images => {
   return images.map(image => {
     const liRef = document.createElement('li');
-    liRef.insertAdjacentHTML('beforeend', '<img src=' + image.url + ' alt="' + image.alt + '">');
+    liRef.insertAdjacentHTML('beforeend', `<img src="${image.url}" alt="${image.alt}">`);
     
     return liRef;
   });
   
 };
 
-const galleryItems = makeGalleryItems(images);
+const galleryItems = makeGalleryItem(images);
 
 galleryListRef.append(...galleryItems);
 
+  
