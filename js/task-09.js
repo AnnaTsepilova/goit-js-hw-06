@@ -2,11 +2,11 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const hexColor = document.querySelector('.color');
+const colorByText = document.querySelector('.color');
 const changeColorBtn = document.querySelector('.change-color');
 
 changeColorBtn.addEventListener("click", () => {
   const randomColor = getRandomHexColor();
-  hexColor.textContent = randomColor;
+  colorByText.textContent = randomColor;
   document.body.style.backgroundColor = randomColor;
 });
