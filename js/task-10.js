@@ -28,12 +28,16 @@ function createBoxes(amount) {
 
   for (let i = 0; i < amount; i += 1) {
     let box = document.createElement("div");
-    box.style.marginTop = "5px";
-    box.style.marginBottom = "5px";
+
     box.style.width = `${currentSizeBox}px`;
     box.style.height = `${currentSizeBox}px`;
     box.style.backgroundColor = getRandomHexColor();
+    box.style.marginTop = "5px";
+    box.style.marginBottom = "5px";
+    box.style.borderRadius = "5px";
+    
     currentSizeBox += 10;
+
     boxes.push(box);
   }
 
