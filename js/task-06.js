@@ -5,7 +5,10 @@ textInput.addEventListener("blur", () => {
 
     textInput.classList.remove('valid');
     textInput.classList.remove('invalid');
-
-  textInput.textContent = textInput.value.length >= quantitySymbols.dataset.length ?
-        textInput.classList.add('valid') : textInput.classList.add('invalid');
+  
+    if (textInput.value.length >= quantitySymbols.dataset.length) {
+      textInput.classList.add('valid')
+    } else {
+      textInput.classList.add('invalid')
+    }
 });
