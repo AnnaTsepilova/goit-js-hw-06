@@ -12,10 +12,10 @@ function onFormSubmit(event) {
         password: formElements.password.value,
     }
 
-    console.log(formData);
-
     if (formData.email === "" || formData.password === "") {
         alert("Будь ласка, заповніть всі поля!");
+    } else {
+        console.log(formData);
     }
 
     event.currentTarget.reset();
